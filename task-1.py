@@ -16,7 +16,7 @@ def extract_text_from_pdfs(pdf_folder):
             with pdfplumber.open(file_path) as pdf:
                 for page in pdf.pages:
                     extracted_text = page.extract_text()
-                    if extracted_text:  # Avoid NoneType pages
+                    if extracted_text:  
                         texts.append(extracted_text)
     return texts
 
